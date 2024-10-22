@@ -58,7 +58,7 @@ if (butonStop == LOW) {
 ```
 ### 4. Indicatorul progresului de încărcare
 - LED-urile indică progresul încărcării bateriei:
-  - LED-ul corespunzător nivelului curent de încărcare va **clipi**, iar LED-urile anterioare rămân aprinse.
+- LED-ul corespunzător nivelului curent de încărcare va **clipi**, iar LED-urile anterioare rămân aprinse.
 
 ```cpp
 if (incarcare) {
@@ -105,6 +105,44 @@ if (incarcare) {
             incarcare = 0; // Procesul de încărcare s-a încheiat
             break;
     }
+}
+```
+### 5. Finalizarea încărcării
+- Când încărcarea este completă, toate LED-urile clipesc simultan de 3 ori pentru a semnaliza finalizarea procesului.
+
+``` cpp
+if (baterie == 4) {
+    digitalWrite(LED_ROSU, LOW);
+    digitalWrite(LED_VERDE, HIGH); // LED verde aprins (stație liberă)
+    
+    for (int i = 0; i < 3; i++) {
+        delay(200);
+        digitalWrite(LED1, HIGH);
+        digitalWrite(LED2, HIGH);
+        digitalWrite(LED3, HIGH);
+        digitalWrite(LED4, HIGH);
+        delay(200);
+        digitalWrite(LED1, LOW);
+        digitalWrite(LED2, LOW);
+        digitalWrite(LED3, LOW);
+        digitalWrite(LED4, LOW);
+    }
+    
+    incarcare = 0; // Oprește procesul de încărcare
+}
+```
+### 6. Resetarea stației
+- Dacă nu este în proces de încărcare, toate LED-urile sunt stinse, iar stația este pregătită pentru o nouă sesiune de încărcare.
+
+```cpp
+if (!incarcare) {
+    // Resetare la starea de stație liberă
+    digitalWrite(LED_ROSU, LOW);
+    digitalWrite(LED_VERDE, HIGH);
+    digitalWrite(LED1, LOW);
+    digitalWrite(LED2, LOW);
+    digitalWrite(LED3, LOW);
+    digitalWrite(LED4, LOW);
 }
 ```
 
