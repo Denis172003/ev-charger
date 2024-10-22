@@ -39,3 +39,21 @@ if (butonInceput == LOW) {
     digitalWrite(LED_ROSU, HIGH);  // LED-ul roșu (ocupat) se aprinde
     digitalWrite(LED_VERDE, LOW);  // LED-ul verde (liber) se stinge
 }
+```
+### 3. Oprirea încărcării
+- Apăsarea lungă a butonului de **stop** (minim 2 secunde) oprește forțat încărcarea.
+
+```cpp
+if (butonStop == LOW) {
+    if (timpApasareButon == 0) {
+        timpApasareButon = millis(); // Memorează momentul apăsării
+    }
+    if (millis() - timpApasareButon >= 2000) {
+        delay(20); // Debouncing
+        incarcare = 0; // Oprește încărcarea
+    }
+} else {
+    timpApasareButon = 0; // Resetează timpul de apăsare
+}
+```
+
