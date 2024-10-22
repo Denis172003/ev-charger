@@ -21,6 +21,10 @@ Procesul de încărcare se desfășoară progresiv: fiecare LED se aprinde pe r�
 - Breadboard
 - Fire de conexiune
 
+## Setup fizic
+
+
+
 ## Descrierea codului
 
 Codul este împărțit în două scenarii principale: **încărcare** și **neîncărcare**.
