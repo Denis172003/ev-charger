@@ -25,7 +25,7 @@ Procesul de încărcare se desfășoară progresiv: fiecare LED se aprinde pe r�
 
 ![ev_charger](https://github.com/user-attachments/assets/e144ce73-05d9-4b70-a741-7418afd25ab4)
 
-https://github.com/user-attachments/assets/31fee606-c259-46ee-aa55-a14c0340a70c
+https://github.com/user-attachments/assets/5dee7273-1d25-4851-8661-894aee2dd844
 
 ## Descrierea codului
 
