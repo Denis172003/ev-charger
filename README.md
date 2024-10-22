@@ -58,7 +58,7 @@ if (butonStop == LOW) {
 ```
 ### 4. Indicatorul progresului de încărcare
 - LED-urile indică progresul încărcării bateriei:
-  - LED-ul corespunzător nivelului curent de încărcare va **clipi**, iar LED-urile anterioare rămân **aprinde**.
+  - LED-ul corespunzător nivelului curent de încărcare va **clipi**, iar LED-urile anterioare rămân aprinse.
 
 ```cpp
 if (incarcare) {
