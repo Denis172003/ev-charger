@@ -13,13 +13,12 @@ Trebuie să simulăm o stație de încărcare folosind LED-uri pentru a arăta n
 Procesul de încărcare se desfășoară progresiv: fiecare LED se aprinde pe rând, iar LED-ul corespunzător procentului curent de încărcare va clipi, la un interval de **3 secunde**.
 
 ## Componentele utilizate
-- Placa **Arduino Uno R3** (ATmega328P)
-- 4x **LED-uri** (pentru procentul de încărcare)
-- 1x **LED RGB** (pentru starea liber/ocupat)
-- 2x **Butoane** (start și stop)
-- 9x **Rezistențe** (7x 220/330 ohmi, 2x 1k ohmi)
-- Breadboard
-- Fire de conexiune
+-4x LED-uri (pentru a simula procentul de încărcare)
+-1x LED RGB (pentru starea de liber sau ocupat)
+-2x Butoane (pentru start încărcare și stop încărcare)
+-8x Rezistoare (6x 220/330ohm, 2x 1K)
+-Breadboard
+-Linii de legătură
 
 ## Setup fizic
 
