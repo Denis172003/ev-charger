@@ -23,7 +23,7 @@ Procesul de încărcare se desfășoară progresiv: fiecare LED se aprinde pe r�
 
 ## Setup fizic
 
-
+![ev_charger](https://github.com/user-attachments/assets/e144ce73-05d9-4b70-a741-7418afd25ab4)
 
 ## Descrierea codului
 
@@ -149,4 +149,4 @@ if (!incarcare) {
     digitalWrite(LED4, LOW);
 }
 ```
-
+<img width="630" alt="Screenshot 2024-10-19 at 23 26 59" src="https://github.com/user-attachments/assets/e454f7ce-441f-470c-a71a-ded62507982a">
