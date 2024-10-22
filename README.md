@@ -25,6 +25,8 @@ Procesul de încărcare se desfășoară progresiv: fiecare LED se aprinde pe r�
 
 ![ev_charger](https://github.com/user-attachments/assets/e144ce73-05d9-4b70-a741-7418afd25ab4)
 
+<!-- Error while uploading 20241021_170011.mp4 -->
+
 ## Descrierea codului
 
 Codul este împărțit în două scenarii principale: **încărcare** și **neîncărcare**.
