@@ -56,4 +56,55 @@ if (butonStop == LOW) {
     timpApasareButon = 0; // Resetează timpul de apăsare
 }
 ```
+### 4. Indicatorul progresului de încărcare
+- LED-urile indică progresul încărcării bateriei:
+  - LED-ul corespunzător nivelului curent de încărcare va **clipi**, iar LED-urile anterioare rămân **aprinde**.
+
+```cpp
+if (incarcare) {
+    int timpCurent = millis();
+    if (timpCurent - timpAnterior >= INTERVAL) {
+        timpAnterior = timpCurent;
+        baterie++; // Crește nivelul de încărcare
+        if (baterie > 4) {
+            baterie = 0; // Resetează bateria la finalizare
+            incarcare = 0; // Termină procesul de încărcare
+        }
+    }
+
+    // Actualizează LED-urile în funcție de progres
+    switch (baterie) {
+        case 0:
+            digitalWrite(LED1, LOW);
+            delay(200);
+            digitalWrite(LED1, HIGH);
+            delay(200);
+            break;
+        case 1:
+            digitalWrite(LED1, HIGH);
+            digitalWrite(LED2, LOW);
+            delay(200);
+            digitalWrite(LED2, HIGH);
+            delay(200);
+            break;
+        case 2:
+            digitalWrite(LED2, HIGH);
+            digitalWrite(LED3, LOW);
+            delay(200);
+            digitalWrite(LED3, HIGH);
+            delay(200);
+            break;
+        case 3:
+            digitalWrite(LED3, HIGH);
+            digitalWrite(LED4, LOW);
+            delay(200);
+            digitalWrite(LED4, HIGH);
+            delay(200);
+            break;
+        case 4:
+            incarcare = 0; // Procesul de încărcare s-a încheiat
+            break;
+    }
+}
+```
 
