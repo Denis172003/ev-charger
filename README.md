@@ -151,4 +151,5 @@ if (!incarcare) {
     digitalWrite(LED4, LOW);
 }
 ```
+### Schema electrica
 <img width="630" alt="Screenshot 2024-10-19 at 23 26 59" src="https://github.com/user-attachments/assets/e454f7ce-441f-470c-a71a-ded62507982a">
