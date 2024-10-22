@@ -141,7 +141,6 @@ if (baterie == 4) {
 
 ```cpp
 if (!incarcare) {
-    // Resetare la starea de stație liberă
     digitalWrite(LED_ROSU, LOW);
     digitalWrite(LED_VERDE, HIGH);
     digitalWrite(LED1, LOW);
